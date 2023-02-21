@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+        <div id="app">
+
+            <script>
+                const productos =[
+                    {title: "burger", price : "21",checkStatus: "checked"},
+                    {title: "piza", price : "32",checkStatus: ""},
+                    {title: "hot Dog", price : "15",checkStatus: "checked"}
+                ];
+                const app1 = document.getElementById('app');
+
+                productos.forEach((prod)=>{
+                    app1.innerHTML+=`<li>${prod.title} - ${prod.price} <input type="checkbox" ${prod.checkStatus}></li>`;
+                })
+                    
+                ;
+            </script>
+
+        </div>
+
+        <div id="lisTask1">
+            <script>
+                const listaTareas =[
+                    {Titulo:"Matematicas",Tiempo:"10 horas",Dificultad:"alta",Estado:"checked"},
+                    {Titulo:"Fisica",Tiempo:"8 horas",Dificultad:"alta",Estado:"checked"},
+                    {Titulo:"Filosofia",Tiempo:"8 horas",Dificultad:"media",Estado:"checked"},
+                    {Titulo:"Literatura",Tiempo:"6 horas",Dificultad:"baja",Estado:""},
+                    {Titulo:"Estadistica",Tiempo:"8 horas",Dificultad:"alta",Estado:"checked"},
+                ];
+
+                const lisTask2 =document.getElementById('lisTask1');
+                lisTask2.innerHTML +=`
+                <tr>
+                <th >Curso</th>
+                <th>Tiempo</th>
+                <th>Dificultad</th>
+                <th>Estado</th>
+                </tr>`;
+
+                listaTareas.forEach((item)=>{
+                    lisTask2.innerHTML+=`<tr><li><th>${item.Titulo}</th> <th> ${item.Tiempo} </th> <th> ${item.Dificultad} </th> 
+                      <th>  <input type="checkbox" id="scales" name="scales" ${item.Estado}></th></li></tr> \n`;
+                });
+            </script>
+        </div>
+</body>
+</html>

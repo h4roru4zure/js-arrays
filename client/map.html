@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="lisTask1">
+        <script>
+            const listaTareas =[
+                {Titulo:"Matematicas",Tiempo:"10 horas",Dificultad:"alta",Estado:"checked"},
+                {Titulo:"Fisica",Tiempo:"8 horas",Dificultad:"alta",Estado:null},
+                {Titulo:"Filosofia",Tiempo:"8 horas",Dificultad:"media",Estado:"checked"},
+                {Titulo:"Literatura",Tiempo:"6 horas",Dificultad:"baja",Estado:""},
+                {Titulo:"Estadistica",Tiempo:"8 horas",Dificultad:"alta",Estado:"checked"},
+            ];
+
+            const lisTask2 =document.getElementById('lisTask1');
+       
+            const lisTask= listaTareas.map((item)=>{
+                return `<tr><li><th>${item.Titulo}</th> <th> ${item.Tiempo} </th> <th> ${item.Dificultad} </th> 
+                  <th>  <input type="checkbox" id="scales" name="scales" ${item.Estado}></th></li></tr> `;
+            });
+            
+            lisTask2.innerHTML= lisTask.join('');
+            
+        </script>
+    </div>
+</body>
+</html>
